@@ -15,6 +15,7 @@
 | GET    | \*                        | 404 page (matches any route not defined above)   |
 
 \*\*places(restaurants)
+'Name', 'City', 'State', 'Cuisines', 'Pic'
 
 \*\*reviews(rants)
 
