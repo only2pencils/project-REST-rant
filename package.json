@@ -1,7 +1,7 @@
 {
   "name": "rest-rant",
   "version": "1.0.0",
-  "description": "",
+  "description": "| Method | Path                      | Purpose                                          |\r | ------ | ------------------------- | ------------------------------------------------ |\r | GET    | `/`                       | The home page                                    |\r | GET    | `/places`                 | Places Index Page                                |\r | POST   | `/places`                 | Create new place                                 |\r | GET    | `/places/new              | Form page for creating a new place               |\r | GET    | `/places/:id              | Details about a particular place                 |\r | PUT    | `/places/:id              | Update a particular place                        |\r | GET    | `/places/:id/edit         | Form page for editing an existing place          |\r | DELETE | `/places/:id              | Delete a particular place                        |\r | POST   | `/places/:id/rant         | Create a rant(comment) about a particular place  |\r | DELETE | `/places/:id/rant/:rantld | Delete a rant (comment) about a particular place |\r | GET    | \\*                        | 404 page (matches any route not defined above)   |",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,14 @@
     "express": "^4.18.1",
     "express-react-views": "^0.11.0",
     "react": "^18.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/only2pencils/project-REST-rant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/only2pencils/project-REST-rant/issues"
+  },
+  "homepage": "https://github.com/only2pencils/project-REST-rant#readme"
 }

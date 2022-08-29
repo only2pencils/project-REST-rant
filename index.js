@@ -5,12 +5,15 @@ const app = express();
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 
+// // PLACES // *CHANGED app.use to app.get// fixed nodemon crash
+// app.use("/index", require("./controllers/places/index"));
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {
   res.render("home");
 });
 
+// WILDCARD ROUTE
 app.get("*", (req, res) => {
   res.render("error404");
 });
