@@ -1,59 +1,32 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('../default')
 
-// PLACES INDEX PAGE
 function index (data) {
-  let placesFormatted = data.places.map((place) => {
+    let placesFormatted = data.places.map((place, index) => {
+        return (
+            <div key='1' className="col-sm-6">
+                <h2 className="text-center">{place.name}</h2>
+                 <p className="text-center">
+                     {place.cuisines}
+                 </p>
+                 <img src={place.pic} alt={place.name} className="center" width="100%"/>
+                 <p className="text-center">
+                     Located in {place.city}, {place.state}
+                 </p>
+            </div>
+        )
+    })
     return (
-      <div>
-        <h2>{place.name}</h2>
-        <img src={place.pic} alt={place.name}/>
-      </div>
+        <Def>
+            <main>
+                <h1> Places to Rant or Rave About </h1>
+                    <div className="row">
+                        {placesFormatted}
+                    </div>               
+            </main>
+        </Def>
     )
-  })
-  return (
-    <Def>
-        <main>
-            <h1>PLACES INDEX PAGE</h1>
-            {placesFormatted}
-        </main>
-    </Def>
-)
 }
 
 module.exports = index
-
-
-// function index (data) {
-//     let placesFormatted = data.places.map((place, index) => {
-//         return (
-//             <div className="col-sm-6">
-//                 <h2>
-//                     <a href={`/places/${place.id}`}>
-//                     {place.name}
-//                     </a>
-//                     </h2>
-//                  <p className="text-center">
-//                      {place.cuisines}
-//                  </p>
-//                  <img src={place.pic} alt={place.name}/>
-//                  <p className="text-center">
-//                      Located in {place.city}, {place.state}
-//                  </p>
-//             </div>
-//         )
-//     })
-//     return (
-//         <Def>
-//             <main>
-//                 <h1> Places to Rant or Rave About </h1>
-//                 <div className="row">
-//                   {placesFormatted}
-//                 </div>               
-//             </main>
-//         </Def>
-//     )
-// }
-
-// module.exports = index
 
