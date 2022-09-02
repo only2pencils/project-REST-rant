@@ -41,8 +41,8 @@ main {
 
 /* BONUS: Sticky Footer wrapper */
 html, body {
-    height: 100%
-    margin: 0
+    height: 100%;
+    margin: 0;
 }
 .wrapper {
     min-height: 100%;
