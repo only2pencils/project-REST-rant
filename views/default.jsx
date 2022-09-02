@@ -10,6 +10,20 @@ function Def (html) {
                 <link rel="stylesheet" href='/css/style.css'/>
             </head>
             <body>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href='/'>Home</a>
+                        </li>
+                        <li>
+                            <a href='/places'>Places</a>
+                        </li>
+                        <li>
+                            <a href='/places/new'>Add Place</a>
+                        </li>
+                    </ul>
+                </nav>
+                {html.children}
                 {/* BONUS: Sticky Footer */}
                 <div class="wrapper">
 
@@ -18,7 +32,7 @@ function Def (html) {
                     <div class="push"></div>
                 </div>
                 <footer class="footer"></footer>
-                {html.children}
+                
             </body>
         </html>
     )
