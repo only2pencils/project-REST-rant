@@ -10,6 +10,14 @@ function Def (html) {
                 <link rel="stylesheet" href='/css/style.css'/>
             </head>
             <body>
+                {/* BONUS: Sticky Footer */}
+                <div class="wrapper">
+
+                    Thanks for the visit
+
+                    <div class="push"></div>
+                </div>
+                <footer class="footer"></footer>
                 {html.children}
             </body>
         </html>
