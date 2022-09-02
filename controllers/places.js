@@ -10,6 +10,22 @@ router.get("/", (req, res) => {
 router.get("/new", (req, res) => {
   res.render("places/new");
 });
+
+router.post("/", (req, res) => {
+  console.log(req.body);
+  if (!req.body.pic) {
+    req.body.pic = "http://placekitten.com/250/250";
+  }
+  if (!req.body.city) {
+    req.body.city = "Anytown";
+  }
+  if (!req.body.state) {
+    req.body.state = "USA";
+  }
+  places.push(req.body);
+  res.redirect("/places");
+});
+
 module.exports = router;
 
 // GET / places INDEX ROUTE
