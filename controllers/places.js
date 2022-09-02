@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const express = require("express");
+const places = require("../models/places.js");
+// const express = require("express");
 // const app = express();
 
 //PLACES INDEX PAGE
@@ -14,7 +15,8 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
   console.log(req.body);
   if (!req.body.pic) {
-    req.body.pic = "http://placekitten.com/250/250";
+    // Default image if one is not provided
+    req.body.pic = "http://placekitten.com/400/400";
   }
   if (!req.body.city) {
     req.body.city = "Anytown";

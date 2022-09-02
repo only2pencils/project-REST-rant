@@ -1,4 +1,4 @@
-// had this in wrong places file
+//  Moved the content of the places array temporary variable from the places index route
 module.exports = [
   {
     name: "H-Thai-ML",
