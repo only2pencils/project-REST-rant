@@ -27,7 +27,7 @@ function Def (html) {
                 {/* BONUS: Sticky Footer */}
                 <div class="wrapper">
 
-                    Thanks for the visit
+                    Author: Ricardo King
 
                     <div class="push"></div>
                 </div>
